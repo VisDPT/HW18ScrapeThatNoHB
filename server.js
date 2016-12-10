@@ -33,6 +33,10 @@ app.use(express.static("public"));
 
 // Database configuration with mongoose
 mongoose.connect("mongodb://heroku_xnw7hw9j:pp2sq9mkqr9jkptp6jam1hfkni@ds127968.mlab.com:27968/heroku_xnw7hw9j");
+//mongoose.connect("mongodb://localhost/HW18ScrapeThatNoHB");
+//mongoose.connect("mongodb://heroku_xnw7hw9j:pp2sq9mkqr9jkptp6jam1hfkni@ds127968.mlab.com:27968/heroku_xnw7hw9j");
+
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -51,7 +55,7 @@ db.once("open", function() {
 
 // Simple index route
 app.get("/", function(req, res) {
-    res.send(index.html);
+    res.send(main.html);
 });
 
 app.get("/scrape", function(req, res) {
