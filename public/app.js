@@ -23,7 +23,7 @@ $(document).on("click", "p", function() {
         // With that done, add the note information to the page
         .done(function(data) {
             console.log(data);
-            // The title of the article
+           
             $("#notes").append("<h2>" + data.title + "</h2>");
             // An input to enter a new title
             $("#notes").append("<input id='titleinput' name='title' >");
